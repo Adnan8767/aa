@@ -16,6 +16,9 @@ body {
   background-color: #0c1021;
   border: solid 10px slategrey;
   border-radius: 10px;
+  background-image: url("https://image.freepik.com/free-vector/happy-halloween-witch-silhouette-moon-theme-design-background_83111-288.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   -webkit-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.6);
@@ -36,15 +39,18 @@ body {
 /* GAME BOARD STYLES END*/
 
 /* SNAKE STYLES */
+
 .snakeBodyPixel {
-  background-color: #fd6401;
-  box-shadow: 0 0 5px #fd6401;
+  background-image: url("https://www.pngkey.com/png/full/461-4615931_pumpkin-png-clipart-halloween-pumpkins-clip-art-transparent.png");
+   background-size: cover;
 }
+
 /* SNAKE STYLES END*/
 
 /* FOOD STYLES */
 .food {
-  background-color: #68e768;
+ background-image: url("https://www.pngkey.com/png/full/461-4615931_pumpkin-png-clipart-halloween-pumpkins-clip-art-transparent.png");
+   background-size: cover;
 }
 /* FOOD STYLES END*/
 
