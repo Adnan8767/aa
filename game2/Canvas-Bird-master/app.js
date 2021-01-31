@@ -53,8 +53,15 @@
         _score: 0,
         //methods
         increaseScore: function() {
+            if (this._score<3)
+            {
             this._score++;
             pointAudio.play();
+        }
+        else{
+            alert("Victory");
+            window.location.href = "https://stackoverflow.com/"
+        }
         },
         getScore: function() {
             return this._score;
@@ -98,8 +105,8 @@
         //positional
         x: 70,
         y: 20,
-        width: 64,
-        height: 64,
+        width:84,
+        height: 84,
 
         //methods
         jump: function() {
@@ -115,10 +122,9 @@
         hasCollided: function() {
             var hasCollided = false;
 
-            var playerX  = this.x + this.width,
+           var playerX  = this.x + this.width,
                 playerTopY    = this.y,
                 playerBottomY = this.y + this.height;
-
             var enemyX = enemies[nextEnemyId].enemyDown.x + 40,
                 enemyLookingDownY = enemies[nextEnemyId].enemyDown.y + enemies[nextEnemyId].enemyDown.img.height,
                 enemyLookingUpY = enemies[nextEnemyId].enemyUp.y,
@@ -145,7 +151,7 @@
             this.velocity = 2;
             this.y = 20;
         },
-        getNextFrame: function() {
+        /*getNextFrame: function() {
             var now = Date.now();
             if (now - fpsCounter > 1000 / fps) {
                 fpsCounter = now;
@@ -153,7 +159,7 @@
                 if (this._currentFrame > 2) this._currentFrame = 0;
             }
             return this._currentFrame;
-        }
+        }*/
     };
 
     //******* Enemy Constructor **********//
@@ -249,8 +255,8 @@
     //Instantiate and draw player
     function drawPlayer() {
         //render player
-        ctx.drawImage(playerImg, player.getNextFrame() * player.width, 0, //crop start
-                      player.width, player.height, //crop end
+        ctx.drawImage(playerImg, 0, 0, //crop start
+                      200, 100, //crop end
                       player.x, player.y, //player pos
                       player.width, player.height); //player sprite size
         //move player
