@@ -22,6 +22,8 @@ const gameBoardPixels = document.getElementsByClassName("gameBoardPixel");
 /// THE FOOD:
 let currentFoodPostion = 0;
 const createFood = () => {
+  if(totalFoodAte<10)
+  {
   // Remove previous food;
   gameBoardPixels[currentFoodPostion].classList.remove("food");
 
@@ -31,8 +33,21 @@ const createFood = () => {
     currentFoodPostion * SQUARE_OF_GAME_PIXEL_COUNT
   );
   gameBoardPixels[currentFoodPostion].classList.add("food");
+}
+else{
+  victory();
+}
 };
 
+//Function to be called after score crosses 10
+const victory = () =>
+{
+  alert("Victory");
+  document.getElementById("gameContainer").style.display = "None";
+  document.getElementById("scoreContainer").style.display = "None";
+  window.location.reload();
+  window.location.href = "http://stackoverflow.com";
+}
 /// THE SNAKE:
 
 // Direction codes (Keyboard key codes for arrow keys):
