@@ -152,6 +152,8 @@ const moveSnake = () => {
 
   if (currentSnakeHeadPosition == currentFoodPostion) {
     // Update total food ate
+    var audio = new Audio('crunch.aac');
+    audio.play();
     totalFoodAte++;
     // Update in UI:
     document.getElementById("pointsEarned").innerHTML = totalFoodAte;
