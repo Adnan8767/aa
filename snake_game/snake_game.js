@@ -149,10 +149,9 @@ const moveSnake = () => {
   totalDistanceTravelled++;
   // Update in UI:
   document.getElementById("blocksTravelled").innerHTML = totalDistanceTravelled;
-
+  var audio = new Audio('crunch.aac');
   if (currentSnakeHeadPosition == currentFoodPostion) {
     // Update total food ate
-    var audio = new Audio('crunch.aac');
     audio.play();
     totalFoodAte++;
     // Update in UI:
