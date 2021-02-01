@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>FLAPPY WITCH</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="startGame()" >
+<div id="controller">
+  <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()" class="button">UP</button><br><br>
+  <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()"class="button">LEFT</button>
+  <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()" class="button">RIGHT</button><br><br>
+  <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()" class="button">DOWN</button>
+</div><br>
+<button onClick="window.location.reload();" CLASS="button2">PLAY AGAIN</button>
+
+ <script src="script.js"></script>
+</body>
+</html>
